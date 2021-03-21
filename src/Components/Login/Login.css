@@ -1,0 +1,32 @@
+input#email, input#password, input#fullname {
+    border: 0;
+    border-bottom: 1px solid lightgray;
+    border-radius: 0;
+}
+input#password:focus {
+    box-shadow: none;
+    border-color: orange;
+}
+input#email:focus {
+    box-shadow: none;
+    border-color: orange;
+}
+input#fullname:focus {
+    box-shadow: none;
+    border-color: orange;
+}
+input::placeholder{
+    font-size: 14px;
+}
+.or{
+    display: none;
+}
+/*Media Query Used Here*/
+@media (min-width: 768px){
+    .w-100.m-auto.border.p-4.signUpArea {
+        width: 50% !important;
+    }
+    .or{
+        display: block;
+    }
+}

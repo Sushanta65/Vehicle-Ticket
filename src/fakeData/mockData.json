@@ -1,10 +1,43 @@
 [
     {
+        "id" : "1",
         "name": "BIKE",
         "bookingPrice": 30,
         "wifi": "Not Abailable",
-        "img" : "https://www.espncricinfo.com/inline/content/image/1221600.html",
-        "id" : "1"
+        "ac": "Not Abailable",
+        "mens": 1,
+        "img" : "https://www.drivespark.com/bikes-photos/modelsoverview/450x400/76/tvs-apache-rtr-160-review-mileage.jpg/3/x.pagespeed.ic.2O2XSb0y1C.jpg"
+        
+    },
+    {
+        "id" : "2",
+        "name": "CAR",
+        "bookingPrice": 50,
+        "wifi": "Abailable",
+        "ac": "Abailable",
+        "mens": 3,
+        "img" : "https://image.shutterstock.com/image-illustration/yellow-taxi-isolated-3d-rendering-260nw-618786881.jpg"
+        
+    },
+    {
+        "id" : "3",
+        "name": "BUS",
+        "bookingPrice": 45,
+        "wifi": "Abailable",
+        "ac": "Abailable",
+        "mens": 2,
+        "img" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQe2p4X_trveale7W6W8B0Lkrz9xNaxc2xUoAI9ZuBImaz1ktfjTScDihA6Zd_RzGYBcUY&usqp=CAU"
+        
+    },
+    {
+        "id" : "4",
+        "name": "TRAIN",
+        "bookingPrice": 20,
+        "wifi": "Abailable",
+        "ac": "Abailable",
+        "mens": 4,
+        "img" : "https://i.dlpng.com/static/png/6483267_preview.png"
+        
     }
 
 ]

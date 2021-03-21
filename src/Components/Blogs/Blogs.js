@@ -2,8 +2,9 @@ import React from 'react';
 
 const Blogs = () => {
     return (
-        <div>
-            <h2>This is Blogs</h2>
+        <div className="text-center py-3">
+            <h2>Blogs are coming soon.</h2>
+            <p>This page is under contraction.</p>
         </div>
     );
 };

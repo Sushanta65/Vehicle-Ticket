@@ -7,10 +7,15 @@ import Distination from './Components/Distination/Distination';
 import Blogs from './Components/Blogs/Blogs';
 import Contact from './Components/Contact/Contact';
 import Login from './Components/Login/Login';
+import { createContext, useState } from 'react';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
+
+export const UserContext = createContext()
 
 function App() {
-
+  const [signedInUser, setSignInUser] = useState({})
   return (
+    <UserContext.Provider value={[signedInUser, setSignInUser]}>
     <BrowserRouter>
     <Header></Header>
       <Switch>
@@ -20,12 +25,12 @@ function App() {
         <Route exact path="/">
           <Home />
         </Route>
-        <Route path="/distination">
+        <PrivateRoute path="/distination">
           <Distination />
-        </Route>
-        <Route path="/blogs">
+        </PrivateRoute>
+        <PrivateRoute path="/blogs">
           <Blogs />
-        </Route>
+        </PrivateRoute>
         <Route path="/contact">
           <Contact /> 
         </Route>
@@ -37,6 +42,7 @@ function App() {
         </Route>
       </Switch>
     </BrowserRouter>
+    </UserContext.Provider>
   );
 }
 

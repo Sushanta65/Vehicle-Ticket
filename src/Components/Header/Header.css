@@ -1,3 +1,10 @@
 .logo{
     width: 200px;
 }
+img.nav-item {
+    width: 40px;
+    border-radius: 25px;
+}
+.navbar{
+    border-bottom:1px solid lightgray;
+}
