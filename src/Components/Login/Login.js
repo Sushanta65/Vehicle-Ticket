@@ -20,7 +20,7 @@ const Login = () => {
     const history = useHistory()
     const location = useLocation()
     let {from} = location.state || {from: { pathname:"/" }}
-
+    console.log(signedInUser)/// Usesd this for diploy error
     const [newUser, setNewUser] = useState(false)
     const [user, setUser] = useState({
         isSignedIn : true,
@@ -133,23 +133,6 @@ const Login = () => {
         }
         e.preventDefault()
     }
-
-    const handleSignOut = () => {
-        firebase.auth().signOut()
-        .then(res => {
-            const signOutUser = {
-                isSignedIn: false,
-                email: '',
-                name: '',
-                photo: '',
-                userCreated: false
-            }
-            setUser(signOutUser)
-
-        }).catch(error => {
-            console.log(error.message)
-        })
-    }
     
     const setUserName = (name) => {
         const user = firebase.auth().currentUser;
@@ -169,27 +152,20 @@ const Login = () => {
     return (
         <div className="container">
             <div className="pt-5">
-                
                 <div className="w-100 m-auto border p-4 signUpArea">
                     <h3>{newUser? "Sign Up Form" : "Login Form"}</h3>
                     <form onSubmit={handleSignUp}>
-
                         {newUser && <input onBlur={handleChange} className="form-control mt-3" type="text" name="fullname" id="fullname" placeholder="Name" required/>}
-                        
                         <input onBlur={handleChange} className="form-control mt-3" id='email' name="email" type="text" placeholder="Enter a Email" required/><small style={{color: "red"}}></small>
-
                         <input onBlur={handleChange} className="form-control mt-3" type="password" name="password" id='password' placeholder="Enter a Password" required/>
-
                         {newUser && <input className="form-control mt-3" type="password" name="password" id='password' placeholder="Retype Password" required/>}
                         <p className="text-danger pt-2">{user.errorMessage}</p>
                         {
                             user.userCreated && <p className="text-success">{newUser? 'Sign In' : 'Login'} Successful...</p>
                         }
                         <input className="btn btn-warning w-100 my-2 mt-4" type="submit" value={!newUser? "Login": "Sign Up"}/>
-
                         <small className=" d-block text-center">{newUser? 'Already have an account?': 'New User?'} 
                         <Link onClick={loginHandle} style={{color: "orange"}}> {newUser? "Login" : "Create an account"}</Link></small>
-                        
                     </form>
                 </div>
                 <small className="text-center text-dark w-100 or">_______________________________ or ______________________________</small>

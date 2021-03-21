@@ -3,8 +3,6 @@ import FakeData from '../../fakeData/mockData.json';
 import Mens from '../../assets/Images/peopleicon.png';
 import './Distination.css'
 
-
-
 const Distination = () => {
     const [search, setSearch] = useState(false)
     const [distination, setDistination] = useState({})

@@ -6,7 +6,7 @@ import { UserContext } from './../../App';
 
 const Header = () => {
 
-    const [signedInUser, setSignedInUser] = useContext(UserContext)
+    const [signedInUser] = useContext(UserContext)
 
     return (
 

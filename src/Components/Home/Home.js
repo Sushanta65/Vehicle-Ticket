@@ -6,7 +6,7 @@ const Home = () => {
     const [vehicles, setVehicles] = useState([])
     useEffect(() => {
       setVehicles(FakeData)
-    }, [FakeData])
+    }, [])
     
     return (
         <div style={{
